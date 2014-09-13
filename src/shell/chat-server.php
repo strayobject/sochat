@@ -7,10 +7,12 @@ use SoChat\Chat;
 
 require dirname(__DIR__) . '/../vendor/autoload.php';
 
-$app = new App('dev.sochat.net');
-$app->route('/chat', new HttpServer(new WsServer(new Chat())));
+$app = new App('dev.sochat.net', 8080, '0.0.0.0');
+$app->route('/', new Chat());
 $app->route('/echo', new Ratchet\Server\EchoServer, array('*'));
+s($app);
 $app->run();
+
 
 
 
