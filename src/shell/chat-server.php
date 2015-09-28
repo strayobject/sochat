@@ -10,7 +10,7 @@ require dirname(__DIR__) . '/../vendor/autoload.php';
 $app = new App('dev.sochat.net', 8080, '0.0.0.0');
 $app->route('/', new Chat());
 $app->route('/echo', new Ratchet\Server\EchoServer, array('*'));
-s($app);
+//s($app);
 $app->run();
 
 

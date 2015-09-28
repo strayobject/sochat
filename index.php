@@ -9,12 +9,18 @@ require __DIR__.'/vendor/autoload.php';
         <script>
             $(function() {
                 load();
+                // window.onbeforeunload(function() {
+                //     exitChat()
+                // });
             });
 
             function load()
             {
-                var button = $('#button-connect');
-                button.on('click', startChat);
+                var connect = $('#button-connect');
+                var exit    = $('#button-exit');
+
+                connect.on('click', startChat);
+                exit.on('click', exitChat);
             }
 
             function startChat()
@@ -30,14 +36,32 @@ require __DIR__.'/vendor/autoload.php';
                 };
 
                 $('#input-submit').on('click', {'conn' : conn}, function(event) {
+                    sendMessage(event.data.conn, $('#input-msg'), $('#box-msg'));
+                });
 
-                    var conn = event.data.conn;
-                    var msg = $('#input-msg').val();
-                    conn.send(msg);
-                    appendToBox($('#box-msg'), msg);
+                $('#input-msg').on('keypress', {'conn' : conn}, function(event) {
+                    if (event.which == 13) {
+                        sendMessage(event.data.conn, $('#input-msg'), $('#box-msg'));
+                    }
                 });
 
                 window.conn = conn;
+            }
+
+            function exitChat()
+            {
+                window.conn.onclose = function () {};
+                window.conn.close()
+                console.log('Connection closed!');
+            }
+
+            function sendMessage(conn, input, box)
+            {
+                var msg = input.val();
+
+                conn.send(msg);
+                appendToBox(box, msg);
+                input.prop('value', '');
             }
 
             function appendToBox(box, data)
