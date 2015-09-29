@@ -1,6 +1,12 @@
 <?php
 
-require __DIR__.'/vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
+
+use Silex\Application;
+
+$app                      = new Silex\Application();
+$app['config.path.base'] = realpath(__DIR__.'/../').'/';
+
 ?>
 <html>
     <head>
@@ -9,9 +15,6 @@ require __DIR__.'/vendor/autoload.php';
         <script>
             $(function() {
                 load();
-                // window.onbeforeunload(function() {
-                //     exitChat()
-                // });
             });
 
             function load()

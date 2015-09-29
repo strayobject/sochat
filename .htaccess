@@ -1,5 +1,5 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
 
-RewriteRule .? index.php [L]
+RewriteRule .? web/index.php [L]
 </IfModule>

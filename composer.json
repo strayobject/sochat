@@ -1,13 +1,18 @@
 {
+    "require": {
+        "cboden/ratchet":"^0",
+        "silex/silex": "^1",
+        "twig/twig": "^1",
+        "symfony/twig-bridge": "^2",
+        "hassankhan/config": "^0",
+        "symfony/yaml": "^2"
+    },
+    "require-dev": {
+        "raveren/kint": "^1"
+    },
     "autoload": {
         "psr-4": {
             "SoChat\\":"src/"
         }
-    },
-    "require": {
-        "cboden/ratchet":"~0.3"
-    },
-    "require-dev": {
-        "raveren/kint": "~0.9"
     }
 }
