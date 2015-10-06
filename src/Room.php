@@ -1,14 +1,11 @@
 <?php
-namespace SoChat;
 
-use Ratchet\MessageComponentInterface;
-use Ratchet\ConnectionInterface;
+namespace SoChat;
 
 class Room
 {
     private $chat;
     private $private;
-
 
     public function __construct(SoChat\Chat $chat)
     {
@@ -29,12 +26,10 @@ class Room
 
     public function kick()
     {
-
     }
 
     public function ban()
     {
-
     }
 
     /**
@@ -46,11 +41,11 @@ class Room
     {
         return $this->chat;
     }
-    
+
     /**
      * Sets the value of chat.
      *
-     * @param mixed $chat the chat 
+     * @param mixed $chat the chat
      *
      * @return self
      */

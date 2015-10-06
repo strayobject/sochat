@@ -5,7 +5,9 @@
         "twig/twig": "^1",
         "symfony/twig-bridge": "^2",
         "hassankhan/config": "^0",
-        "symfony/yaml": "^2"
+        "symfony/yaml": "^2",
+        "jamesmoss/flywheel": "^0.4",
+        "fire015/flintstone": "^1"
     },
     "require-dev": {
         "raveren/kint": "^1"

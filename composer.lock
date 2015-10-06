@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fbf4ab53e2ab813799c6a68b2e832d4b",
-    "content-hash": "e7579251442afea534aa39d00f361068",
+    "hash": "e35e7f9ed6039d43dd3097f6d604b473",
+    "content-hash": "32ec1f3c391111487a8df3d5d6fb4afd",
     "packages": [
         {
             "name": "cboden/ratchet",
@@ -100,6 +100,53 @@
                 "event-emitter"
             ],
             "time": "2012-11-02 14:49:47"
+        },
+        {
+            "name": "fire015/flintstone",
+            "version": "v1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fire015/flintstone.git",
+                "reference": "e590c6c8780b5c19b5d494e021094d63ea484fa8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fire015/flintstone/zipball/e590c6c8780b5c19b5d494e021094d63ea484fa8",
+                "reference": "e590c6c8780b5c19b5d494e021094d63ea484fa8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flintstone\\": "src/Flintstone/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jason M",
+                    "email": "emailfire@gmail.com"
+                }
+            ],
+            "description": "A key/value database store using flat files for PHP",
+            "homepage": "http://www.xeweb.net/flintstone/",
+            "keywords": [
+                "cache",
+                "database",
+                "files",
+                "flintstone",
+                "memory"
+            ],
+            "time": "2015-03-25 16:58:57"
         },
         {
             "name": "guzzle/common",
@@ -355,6 +402,62 @@
                 "yml"
             ],
             "time": "2015-03-21 11:21:39"
+        },
+        {
+            "name": "jamesmoss/flywheel",
+            "version": "0.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jamesmoss/flywheel.git",
+                "reference": "7811474e0933541d96fdf88d316107996a7bb216"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jamesmoss/flywheel/zipball/7811474e0933541d96fdf88d316107996a7bb216",
+                "reference": "7811474e0933541d96fdf88d316107996a7bb216",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "1.2.0",
+                "mockery/mockery": "dev-master@dev",
+                "mustangostang/spyc": "0.5.*@dev",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "mustangostang/spyc": "You must install this if you're using the YAML or Markdown formatters."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JamesMoss\\Flywheel\\": [
+                        "src/",
+                        "test/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Moss",
+                    "email": "james@moss.io",
+                    "homepage": "http://moss.io"
+                }
+            ],
+            "description": "A lightweight, flat-file, document database",
+            "homepage": "http://github.com/jamesmoss/flywheel",
+            "keywords": [
+                "db",
+                "document",
+                "file",
+                "flat"
+            ],
+            "time": "2015-06-04 10:48:02"
         },
         {
             "name": "pimple/pimple",

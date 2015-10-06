@@ -1,0 +1,48 @@
+{% extends 'master.html.twig' %}
+
+{% block footerJs %}
+<script type="text/javascript" src="/assets/js/room.js"></script>
+{% endblock %}
+
+{% block headCss %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="roomList col-lg-1">
+            <h2>Rooms</h2>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span>Lobby</span>
+                    </a>
+                    <a class="button-exit" href="#exit" data-room="Lobby">
+                        <span>X<span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="chatBox col-lg-8">
+            <input type="text" name="uname" id="uname" value="{{ uname }}" hidden/>
+            <br/>
+            <div id="box-msg" class="chatBoxMsg">
+            </div>
+            <br/>
+            <div class="form-inline">
+                <div class="form-group form-group-lg">
+                    <input class="chatText form-control" type="text" id="input-msg" placeholder="Hi there!"/>
+                    <button id="input-submit" class="chatSend btn btn-lg btn-primary" type="submit">
+                        <i class="fa fa-paper-plane-o"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="userList col-lg-3">
+            <h2>Users</h2>
+            <div id="userList">
+            {{ include('partial/userlist.html.twig', users) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
