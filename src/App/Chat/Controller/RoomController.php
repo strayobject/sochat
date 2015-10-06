@@ -50,4 +50,16 @@ class RoomController
             ]
         );
     }
+    /**
+     * @todo we need to be able to obtain an empty port number
+     * @todo we need to be able to pass port number to the server init script
+     * @param  Request     $request [description]
+     * @param  Application $app     [description]
+     * @return [type]               [description]
+     */
+    public function createOneToOne(Request $request, Application $app)
+    {
+        $port = ''
+        $pid = exec('nohup php src/shell/chat-server.php -p '.$port.' & echo $!');
+    }
 }
